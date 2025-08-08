@@ -10,6 +10,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
       /* ---------- Tile grid on Work ---------- */
@@ -35,14 +37,14 @@
         display: block;
         transition: transform 0.35s ease;
       }
-      /* Overlay label + icon */
+      /* Overlay label + icon (brightened background) */
       .tile .overlay {
         position: absolute;
         inset: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(0,0,0,0.35);
+        background: rgba(0,0,0,0.45); /* was 0.35 */
         opacity: 0;
         transition: opacity 0.25s ease;
         padding: 0 1rem;
@@ -53,12 +55,36 @@
         font-weight: 700;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .tile .overlay i {
+        font-size: 1.15rem;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.45));
+        transition: transform 0.3s ease, opacity 0.3s ease;
       }
       .tile .thumb:hover img { transform: scale(1.06); }
       .tile .thumb:hover .overlay { opacity: 1; }
+      /* Hover animation (gentle pulse) */
+      @keyframes pulseIcon {
+        0%   { transform: scale(1); opacity: 0.9; }
+        100% { transform: scale(1.12); opacity: 1; }
+      }
+      .tile .thumb:hover .overlay i {
+        animation: pulseIcon 900ms ease-in-out infinite alternate;
+      }
 
       .tile h3 { margin-top: 0.6rem; }
       .tile h3 a { border-bottom: none; }
+
+      /* Category icon colors */
+      .tile.maps .overlay i { color: #4CAF50; }       /* green */
+      .tile.analysis .overlay i { color: #2196F3; }   /* blue */
+      .tile.apps .overlay i { color: #FF9800; }       /* orange */
+      .tile.datamgmt .overlay i { color: #9C27B0; }   /* purple */
+      .tile.stats .overlay i { color: #E91E63; }      /* pink */
+      .tile.workflows .overlay i { color: #FFC107; }  /* amber */
 
       /* ---------- Category sub-nav (sticky) ---------- */
       .cat-nav {
@@ -146,50 +172,50 @@
 
           <div class="work-grid">
 
-            <section class="tile">
+            <section class="tile maps">
               <a href="#maps" class="thumb image main">
                 <img src="images/Bigfoot.png" alt="Maps" />
-                <div class="overlay"><span>Explore Maps</span></div>
+                <div class="overlay"><span><i class="fa-solid fa-map"></i> Explore Maps</span></div>
               </a>
               <h3><a href="#maps">Maps</a></h3>
             </section>
 
-            <section class="tile">
+            <section class="tile analysis">
               <a href="#analysis" class="thumb image main">
                 <img src="images/impervious.jpg" alt="Analysis" />
-                <div class="overlay"><span>Dive into Analysis</span></div>
+                <div class="overlay"><span><i class="fa-solid fa-chart-line"></i> Dive into Analysis</span></div>
               </a>
               <h3><a href="#analysis">Analysis</a></h3>
             </section>
 
-            <section class="tile">
+            <section class="tile apps">
               <a href="#apps" class="thumb image main">
                 <img src="images/Goat.png" alt="Apps" />
-                <div class="overlay"><span>Open Apps</span></div>
+                <div class="overlay"><span><i class="fa-solid fa-laptop-code"></i> Open Apps</span></div>
               </a>
               <h3><a href="#apps">Apps</a></h3>
             </section>
 
-            <section class="tile">
+            <section class="tile datamgmt">
               <a href="#datamanagement" class="thumb image main">
                 <img src="images/tacoma.jpg" alt="Data Management" />
-                <div class="overlay"><span>See Data Management</span></div>
+                <div class="overlay"><span><i class="fa-solid fa-database"></i> See Data Management</span></div>
               </a>
               <h3><a href="#datamanagement">Data Management</a></h3>
             </section>
 
-            <section class="tile">
+            <section class="tile stats">
               <a href="#stats" class="thumb image main">
                 <img src="images/olympus.jpg" alt="Stats" />
-                <div class="overlay"><span>View Stats</span></div>
+                <div class="overlay"><span><i class="fa-solid fa-chart-bar"></i> View Stats</span></div>
               </a>
               <h3><a href="#stats">Stats</a></h3>
             </section>
 
-            <section class="tile">
+            <section class="tile workflows">
               <a href="#workflows" class="thumb image main">
                 <img src="images/background2.png" alt="Workflows" />
-                <div class="overlay"><span>Browse Workflows</span></div>
+                <div class="overlay"><span><i class="fa-solid fa-cogs"></i> Browse Workflows</span></div>
               </a>
               <h3><a href="#workflows">Workflows</a></h3>
             </section>
