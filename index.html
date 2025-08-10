@@ -151,7 +151,25 @@
         margin: 0 0 0.4rem 0;
       }
       .backlink { display:inline-block; margin: 0.25rem 0 1rem; }
-    </style>
+    
+/* Stronger wrap: make card buttons full-width, stacked, and wrapping */
+.card .body .button.small {
+  display: block;           /* stack vertically and allow width control */
+  width: 100%;              /* occupy full card width */
+  max-width: 100%;
+  white-space: normal;      /* allow multi-line */
+  overflow-wrap: anywhere;  /* break anywhere if needed */
+  word-break: normal;       /* prefer normal breaks with spaces */
+  line-height: 1.35;
+  font-size: 0.9em;         /* slightly larger than 0.85 for readability */
+  text-align: center;
+  margin-bottom: 0.5rem;    /* spacing between stacked buttons */
+  box-sizing: border-box;
+}
+/* Optional: last button no extra gap */
+.card .body .button.small:last-child { margin-bottom: 0; }
+
+</style>
   </head>
   <body class="is-preload">
 
