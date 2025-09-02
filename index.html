@@ -634,35 +634,105 @@
         </article>
 
         <!-- Contact -->
-        <article id="contact">
-          <h2 class="major">Contact</h2>
-          <form method="post" action="mailto:jserfass39@gmail.com" enctype="text/plain">
-            <div class="fields">
-              <div class="field half">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div class="field half">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4"></textarea>
-              </div>
-            </div>
-            <ul class="actions">
-              <li><input type="submit" value="Send Message" class="primary" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-          </form>
-          <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/joshua-serfass-77072838/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://www.facebook.com/joshua.serfass.1/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/loosewolf39/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="https://github.com/jserfass" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          </ul>
-        </article>
+<article id="contact">
+  <h2 class="major">Contact</h2>
+  <p>Get in touch! I'd love to hear about your project or discuss opportunities in GIS, natural resource management, wildlife management, asset management, UAS operations, or geospatial technologies.</p>
+  
+  <form id="contactForm" method="post" action="#" onsubmit="handleFormSubmit(event)">
+    <div class="fields">
+      <div class="field half">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div class="field half">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+      </div>
+    </div>
+    <ul class="actions">
+      <li><input type="submit" value="Send Message" class="primary" /></li>
+      <li><input type="reset" value="Reset" /></li>
+    </ul>
+  </form>
+
+  <!-- Success/Error Messages -->
+  <div id="formMessage" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px;"></div>
+
+  <!-- Contact Information -->
+  <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+    <h3>Connect With Me</h3>
+    <p>
+      <strong>Email:</strong> <a href="mailto:jserfass39@gmail.com">jserfass39@gmail.com</a><br>
+      <strong>Location:</strong> Washington State<br>
+      <strong>Current Role:</strong> Mission Sensor Program Specialist, WA DNR
+    </p>
+  </div>
+
+  <ul class="icons">
+    <li><a href="https://www.linkedin.com/in/joshua-serfass-77072838/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+    <li><a href="https://www.facebook.com/joshua.serfass.1/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+    <li><a href="https://www.instagram.com/loosewolf39/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+    <li><a href="https://github.com/jserfass" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+  </ul>
+</article>
+
+<script>
+function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  const form = document.getElementById('contactForm');
+  const messageDiv = document.getElementById('formMessage');
+  const formData = new FormData(form);
+  
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const message = formData.get('message');
+  
+  // Create email content
+  const subject = `Portfolio Contact from ${name}`;
+  const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+  
+  // Create mailto link
+  const mailtoLink = `mailto:jserfass39@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  // Show success message
+  messageDiv.style.display = 'block';
+  messageDiv.style.backgroundColor = 'rgba(76, 175, 80, 0.1)';
+  messageDiv.style.border = '1px solid rgba(76, 175, 80, 0.3)';
+  messageDiv.style.color = '#4CAF50';
+  messageDiv.innerHTML = `
+    <strong>Message prepared!</strong><br>
+    Your default email client should open with the message pre-filled.<br>
+    <a href="${mailtoLink}" style="color: #4CAF50; text-decoration: underline;">Click here if it doesn't open automatically</a>
+  `;
+  
+  // Try to open email client
+  try {
+    window.location.href = mailtoLink;
+  } catch (error) {
+    console.log('Email client not available');
+  }
+  
+  // Reset form after 3 seconds
+  setTimeout(() => {
+    form.reset();
+    messageDiv.style.display = 'none';
+  }, 3000);
+}
+
+// Alternative: Copy to clipboard functionality
+function copyToClipboard(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      console.log('Copied to clipboard');
+    });
+  }
+}
+</script>
 
       </div>
 
