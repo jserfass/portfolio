@@ -169,6 +169,14 @@
 /* Optional: last button no extra gap */
 .card .body .button.small:last-child { margin-bottom: 0; }
 
+
+/* Smaller font size for Stats buttons only */
+#stats .card .body .button.small {
+  font-size: 0.60em;
+  line-height: 1.3;
+}
+
+
 /* Project date tag */
 .project-date {
   display: inline-block;
@@ -177,17 +185,7 @@
   letter-spacing: 0.04em;
   margin-bottom: 0.35rem;
 }
-.project-date i {
-  margin-right: 0.3em;
-}
-
-
-/* Smaller font size for Stats buttons only */
-#stats .card .body .button.small {
-  font-size: 0.60em;
-  line-height: 1.3;
-}
-
+.project-date i { margin-right: 0.3em; }
 </style>
   </head>
   <body class="is-preload">
@@ -220,7 +218,7 @@
         <!-- FEATURED WORK -->
         <article id="featured">
           <h2 class="major">Featured Work</h2>
-          <p>Selected recent projects highlighting GIS data management, automation, and spatial analysis. <a href="#work">Browse all work →</a></p>
+          <p>Selected recent projects highlighting GIS data management, automation, and spatial analysis. <a href="#work">Browse all work &rarr;</a></p>
           <div class="card-grid">
 
             <div class="card">
@@ -231,8 +229,8 @@
               </div>
               <div class="body">
                 <span class="project-date"><i class="fa-regular fa-calendar"></i> March 2026</span>
-                <h4>Western Washington Cougar Conflicts: It's not them. It's us.</h4>
-                <p>Spatial analysis of forest loss and human encroachment across nine Game Management Units surrounding Thurston County, 2001–2024. Independent research project integrating NLCD, census, and wildlife conflict data.</p>
+                <h4>Western Washington Cougar Conflicts: It&#39;s not them. It&#39;s us.</h4>
+                <p>Spatial analysis of forest loss and human encroachment across nine Game Management Units surrounding Thurston County, 2001&ndash;2024. Independent research integrating NLCD, census, and wildlife conflict data.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/az1ur">Open</a>
               </div>
             </div>
@@ -246,7 +244,7 @@
               <div class="body">
                 <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
                 <h4>WFIGS Export Tool</h4>
-                <p>ArcPy automation toolbox that extracts and converts wildfire intelligence — lightning, active incidents, perimeters, thermal detections, and mission areas — into field-ready KMZ formats for DNR Aviation Operations.</p>
+                <p>ArcPy automation toolbox that extracts and converts wildfire intelligence &mdash; lightning, active incidents, perimeters, thermal detections, and mission areas &mdash; into field-ready KMZ formats for DNR Aviation Operations.</p>
                 <a class="button small" target="_blank" href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing">View Manual</a>
               </div>
             </div>
@@ -258,6 +256,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> Updated January 2026</span>
                 <span class="project-date"><i class="fa-regular fa-calendar"></i> Updated January 2026</span>
                 <h4>Washington DNR UAS Pilot Locations Map</h4>
                 <p>Large-scale operational reference map supporting statewide DNR UAS program management; integrates DNR lands, regional offices, airports, and LAANC authorization areas.</p>
@@ -684,52 +683,49 @@
           </div>
           <h2 class="major">Workflows</h2>
           <div class="card-grid">
-
             <div class="card">
               <div class="body">
                 <h4>Coming Soon</h4>
-                <p>End-to-end process write-ups (collection &rarr; processing &rarr; analysis &rarr; delivery).</p>
+                <p>End-to-end process write-ups (collection → processing → analysis → delivery).</p>
               </div>
+          <div class="card-grid">
+                <div class="card">
+                  <div class="media">
+                    <a href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing" target="_blank">
+                      <img src="images/WFIGS_Tool.png" alt="WFIGS Tool Manual" />
+                    </a>
+                  </div>
+                  <div class="body">
+                    <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
+                    <h4>WFGIS EXPORT TOOL - USER MANUAL &amp; TECHNICAL GUIDE</h4>
+                    <p>This manual is designed to assist DNR Aviation Operations personnel in efficiently extracting critical wildfire intelligence from multiple geospatial data sources. The WFGIS Export Tool streamlines the collection and conversion of lightning strike data, active incident locations, fire perimeters, satellite thermal detections, and aviation mission areas into field-ready KMZ formats optimized for Google Earth and mobile platforms. Accurate and timely data export is essential for supporting initial attack decisions, tactical planning, and situational awareness during wildfire operations. Proper data integration ensures that aviation crews have access to comprehensive, up-to-date intelligence that directly impacts flight safety, resource deployment effectiveness, and operational success across Washington State's diverse fire management landscape.</p>
+                    <a class="button small" target="_blank" href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing">View Manual</a>
+                  </div>
+                </div>
+                <div class="card-grid">
+                  <div class="card">
+                    <div class="media">
+                      <a href="https://drive.google.com/file/d/1_8OF1tNzpIWQ2HUqTu6SyPF47AGVlb_v/view?usp=sharing" target="_blank">
+                        <img src="images/NIFS_Tool.png" alt=" Tool Manual" />
+                      </a>
+                    </div>
+                    <div class="body">
+                      <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
+                      <h4>NIFS TOOL - USER MANUAL &amp; TECHNICAL GUIDE</h4>
+                      <p>This manual is designed to assist DNR Aviation Operations personnel in processing and exporting National Incident Feature Service (NIFS) data for wildfire incident operations. The NIFS Tools automates the filtering and conversion of standardized incident features—including tactical points, operational boundaries, linear restrictions, and area polygons—into KMZ files optimized for Google Earth and field operations platforms. Accurate NIFS data processing is essential for maintaining operational safety and tactical effectiveness, as it ensures aviation crews have access to current helispot locations, temporary flight restrictions, aerial hazards, and fire perimeters using nationally standardized symbology. Proper data export supports incident briefing packages, mission planning, and real-time situational awareness while maintaining consistency with interagency wildfire mapping standards across all coordination levels.</p>
+                      <a class="button small" target="_blank" href="https://drive.google.com/file/d/1_8OF1tNzpIWQ2HUqTu6SyPF47AGVlb_v/view?usp=sharing">View Manual</a>
+                    </div>
+                  </div>
             </div>
-
-            <div class="card">
-              <div class="media">
-                <a href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing" target="_blank">
-                  <img src="images/WFIGS_Tool.png" alt="WFIGS Tool Manual" />
-                </a>
-              </div>
-              <div class="body">
-                <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
-                <h4>WFIGS EXPORT TOOL - USER MANUAL &amp; TECHNICAL GUIDE</h4>
-                <p>ArcPy toolbox that streamlines the collection and conversion of wildfire intelligence &mdash; lightning strikes, active incidents, fire perimeters, thermal detections, and aviation mission areas &mdash; into field-ready KMZ formats for Google Earth and mobile platforms.</p>
-                <a class="button small" target="_blank" href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing">View Manual</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="media">
-                <a href="https://drive.google.com/file/d/1_8OF1tNzpIWQ2HUqTu6SyPF47AGVlb_v/view?usp=sharing" target="_blank">
-                  <img src="images/NIFS_Tool.png" alt="NIFS Tool Manual" />
-                </a>
-              </div>
-              <div class="body">
-                <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
-                <h4>NIFS TOOL - USER MANUAL &amp; TECHNICAL GUIDE</h4>
-                <p>Automates the filtering and conversion of National Incident Feature Service data &mdash; tactical points, operational boundaries, linear restrictions, and area polygons &mdash; into KMZ files optimized for Google Earth and field operations platforms.</p>
-                <a class="button small" target="_blank" href="https://drive.google.com/file/d/1_8OF1tNzpIWQ2HUqTu6SyPF47AGVlb_v/view?usp=sharing">View Manual</a>
-              </div>
-            </div>
-
           </div>
         </article>
-
 
         <!-- About -->
         <article id="about">
           <h2 class="major">About</h2>
           <span class="image main"><img src="images/tie.jpg" alt="Portrait" /></span>
           <p>
-            My name is Joshua Serfass, and I currently serve as the Air Operations Automation Coordinator (Wildland Fire Program Coordinator 1) for the Washington State Department of Natural Resources (DNR), Wildland Fire Management Division. In this role I focus on geospatial data management, automation toolbox development, and operational data systems supporting DNR's aviation and wildfire programs.
+            My name is Joshua Serfass, and I currently serve as the Air Operations Automation Coordinator (Wildland Fire Program Coordinator 1) for the Washington State Department of Natural Resources (DNR), Wildland Fire Management Division. In this role I focus on geospatial data management, automation toolbox development, and operational data systems supporting DNR&rsquo;s aviation and wildfire programs.
           </p>
           <p>
             I serve as a Geographic Information Systems Specialist (GISS) on Northwest Incident Management Team 13, a Type 2 Wildfire Incident Management Team. I am also a qualified Part 107 UAS pilot, with open NWCG UAS-P (Pilot) and UAS-D (Data Specialist) task books.
@@ -776,7 +772,7 @@
   <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
     <h3>Connect With Me</h3>
     <p>
-      <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#a6ccd5c3d4c0c7d5d5959fe6c1cbc7cfca88c5c9cb"><span class="__cf_email__" data-cfemail="0e647d6b7c686f7d7d3d374e69636f6762206d6163">[email&#160;protected]</span></a><br>
+      <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#274d54425541465454141e67404a464e4b0944484a"><span class="__cf_email__" data-cfemail="d6bca5b3a4b0b7a5a5e5ef96b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></a><br>
       <strong>Location:</strong> Washington State<br>
       <strong>Current Role:</strong> Air Operations Automation Coordinator, WA DNR
     </p>
