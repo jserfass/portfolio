@@ -169,6 +169,18 @@
 /* Optional: last button no extra gap */
 .card .body .button.small:last-child { margin-bottom: 0; }
 
+/* Project date tag */
+.project-date {
+  display: inline-block;
+  font-size: 0.72em;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+.project-date i {
+  margin-right: 0.3em;
+}
+
 
 /* Smaller font size for Stats buttons only */
 #stats .card .body .button.small {
@@ -189,11 +201,12 @@
           <div class="inner">
             <h1>Joshua Serfass</h1>
             <p>Master of Science - Geospatial Technologies - University of Washington, Tacoma</p>
-            <p>Mission Sensor Program Specialist - Washington State Department of Natural Resources</p>
+            <p>Air Operations Automation Coordinator - Washington State Department of Natural Resources</p>
           </div>
         </div>
         <nav>
           <ul>
+            <li><a href="#featured">Featured</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -203,6 +216,70 @@
 
       <!-- Main -->
       <div id="main">
+
+        <!-- FEATURED WORK -->
+        <article id="featured">
+          <h2 class="major">Featured Work</h2>
+          <p>Selected recent projects highlighting GIS data management, automation, and spatial analysis. <a href="#work">Browse all work →</a></p>
+          <div class="card-grid">
+
+            <div class="card">
+              <div class="media">
+                <a href="https://arcg.is/az1ur" target="_blank">
+                  <img src="images/Cougar.png" alt="Western Washington Cougar Conflicts" />
+                </a>
+              </div>
+              <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> March 2026</span>
+                <h4>Western Washington Cougar Conflicts: It's not them. It's us.</h4>
+                <p>Spatial analysis of forest loss and human encroachment across nine Game Management Units surrounding Thurston County, 2001–2024. Independent research project integrating NLCD, census, and wildlife conflict data.</p>
+                <a class="button small" target="_blank" href="https://arcg.is/az1ur">Open</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="media">
+                <a href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing" target="_blank">
+                  <img src="images/WFIGS_Tool.png" alt="WFIGS Export Tool" />
+                </a>
+              </div>
+              <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
+                <h4>WFIGS Export Tool</h4>
+                <p>ArcPy automation toolbox that extracts and converts wildfire intelligence — lightning, active incidents, perimeters, thermal detections, and mission areas — into field-ready KMZ formats for DNR Aviation Operations.</p>
+                <a class="button small" target="_blank" href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing">View Manual</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="media">
+                <a href="https://drive.google.com/file/d/1z_ww03E78tXtLDUoV1dk1P90QfVPccX1/view?usp=sharing" target="_blank">
+                  <img src="images/Bigfoot.png" alt="Washington DNR UAS Pilot Locations Map" />
+                </a>
+              </div>
+              <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> Updated January 2026</span>
+                <h4>Washington DNR UAS Pilot Locations Map</h4>
+                <p>Large-scale operational reference map supporting statewide DNR UAS program management; integrates DNR lands, regional offices, airports, and LAANC authorization areas.</p>
+                <a class="button small" target="_blank" href="https://drive.google.com/file/d/1z_ww03E78tXtLDUoV1dk1P90QfVPccX1/view?usp=sharing">View Map</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="media">
+                <img src="images/RW_WeeklyStats.png" alt="DNR Aviation Stats" />
+              </div>
+              <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> Ongoing</span>
+                <h4>DNR Aviation Stats Reports</h4>
+                <p>Weekly and year-to-date fixed wing and rotor wing reports produced for WA DNR Fire &amp; Aviation leadership, tracking fleet utilization and mission data across the fire season.</p>
+                <a class="button small" target="_blank" href="https://drive.google.com/file/d/1SkxsQDf5HSZRcPLFh9M-5swUGL7RrKn2/view?usp=sharing">Weekly Fixed Wing</a>
+                <a class="button small" target="_blank" href="https://drive.google.com/file/d/1Sejw1e_9TS1xxMvW5EmsZge1ZkdsqGzO/view?usp=sharing">Year-to-Date Rotor Wing</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
 
         <!-- Work -->
         <article id="work">
@@ -285,6 +362,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> Updated January 2026</span>
                 <h4>Washington DNR UAS Pilot Locations Map</h4>
                 <p>Large-scale reference map supporting DNR UAS operations; includes DNR lands, regional offices, highways, airports, population centers, and LAANC UAS authorization areas.</p>
                 <a class="button small" target="_blank" href="https://drive.google.com/file/d/1z_ww03E78tXtLDUoV1dk1P90QfVPccX1/view?usp=sharing">View Map</a>
@@ -298,6 +376,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> Ongoing</span>
                 <h4>Wildfire Mapping</h4>
                 <p>Selected operational map products produced while on fire assignments. <em>Occasionally updated.</em></p>
                 <a class="button small" target="_blank" href="https://arcg.is/9jGjO">Open Gallery</a>
@@ -311,6 +390,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> December 2022</span>
                 <h4>A 3D Journey to Mount Rainier</h4>
                 <p>Taking vintage topo maps and creating new from old.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/1WWDuP1">View Story</a>
@@ -344,6 +424,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> March 2026</span>
                 <h4>Western Washington Cougar Conflicts: It's not them. It's us.</h4>
                 <p>A spatial analysis of forest loss and human development in nine Game Management Units surrounding Thurston County, 2001-2024</p>
                 <a class="button small" target="_blank" href="https://arcg.is/az1ur">Open</a>
@@ -357,6 +438,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> April 2021</span>
                 <h4>Snow, Safety, &amp; Solitude</h4>
                 <p>Suitability analysis exploring the search for the ideal backcountry skiing locations.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/1fe8Or">Open</a>
@@ -370,6 +452,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> December 2020</span>
                 <h4>Pierce County Soil Toxicity</h4>
                 <p>Identifying remediation priority areas.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/1PiLee">Open</a>
@@ -383,6 +466,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> November 2020</span>
                 <h4>Pierce County Transit Flood Analysis</h4>
                 <p>Identifying hazardous routes.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/1yDfXz">Open</a>
@@ -396,6 +480,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> November 2020</span>
                 <h4>Impervious Surface Cover</h4>
                 <p>Pierce County Elementary Schools.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/1rOK4X">Open</a>
@@ -409,6 +494,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> January 2021</span>
                 <h4>Location, Location, Location</h4>
                 <p>Does proximity to residential treatment centers decrease assessed value of single-family homes?</p>
                 <a class="button small" target="_blank" href="https://arcg.is/KO8mn">Open</a>
@@ -423,6 +509,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> February 2021</span>
                 <h4>A Campus Tour</h4>
                 <p>Digitally representing the UW Tacoma campus using LiDAR and 3D modeling.</p>
                 <a class="button small" target="_blank" href="https://arcg.is/1Pnn1q">Open</a>
@@ -456,6 +543,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> August 2023</span>
                 <h4>MSGT Capstone Project: Tread Lightly</h4>
                 <p>Mobile-friendly web GIS highlighting seasonally sensitive wildlife habitat.</p>
                 <a class="button small" target="_blank" href="https://drive.google.com/file/d/1kk8B7jzK1qJyG44ZihIDGiHghX365TcI/view?usp=drive_link">Research Paper</a>
@@ -469,6 +557,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> May 2023</span>
                 <h4>Operation Just Cause</h4>
                 <p>A look at the US invasion of Panama in 1989.</p>
                 <a class="button small" target="_blank" href="https://jserfass.github.io/Time/">Open</a>
@@ -482,6 +571,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2023</span>
                 <h4>Mapping the Internet</h4>
                 <p>An interactive web story about the reach of big data around the globe.</p>
                 <a class="button small" target="_blank" href="https://jserfass.github.io/MapTheInternet/">Open</a>
@@ -514,6 +604,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
                 <h4>DNR Cost Tracking System Jurisdiction Manual</h4>
                 <p>This manual is designed to assist field personnel in correctly assigning land management agency jurisdiction to aviation assets operating on wildland fire incidents. Accurate jurisdictional assignment is essential, as it directly supports the production of reliable aviation statistics for the fire season. Proper attribution ensures that data used for planning, reporting, and decision-making reflects true agency involvement and resource commitment.</p>
                 <a class="button small" target="_blank" href="https://drive.google.com/file/d/1B9JYF2kcCeKTi350gvohqm-d0_C2UkMU/view?usp=sharing">View Manual</a>
@@ -554,6 +645,7 @@
                 </a>
               </div>
               <div class="body">
+                <span class="project-date"><i class="fa-regular fa-calendar"></i> December 2022</span>
                 <h4>20 Most Prominent Washington Peaks</h4>
                 <p>Exploring prominence and the 20 most prominent peaks in Washington.</p>
                 <a class="button small" target="_blank" href="https://jserfass.github.io/WA20/">Open</a>
@@ -605,6 +697,7 @@
                     </a>
                   </div>
                   <div class="body">
+                    <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
                     <h4>WFGIS EXPORT TOOL - USER MANUAL & TECHNICAL GUIDE</h4>
                     <p>This manual is designed to assist DNR Aviation Operations personnel in efficiently extracting critical wildfire intelligence from multiple geospatial data sources. The WFGIS Export Tool streamlines the collection and conversion of lightning strike data, active incident locations, fire perimeters, satellite thermal detections, and aviation mission areas into field-ready KMZ formats optimized for Google Earth and mobile platforms. Accurate and timely data export is essential for supporting initial attack decisions, tactical planning, and situational awareness during wildfire operations. Proper data integration ensures that aviation crews have access to comprehensive, up-to-date intelligence that directly impacts flight safety, resource deployment effectiveness, and operational success across Washington State's diverse fire management landscape.</p>
                     <a class="button small" target="_blank" href="https://drive.google.com/file/d/1g5sRBSmK59T3sizPu2HFdGi9971HXwCH/view?usp=sharing">View Manual</a>
@@ -618,6 +711,7 @@
                       </a>
                     </div>
                     <div class="body">
+                      <span class="project-date"><i class="fa-regular fa-calendar"></i> June 2025</span>
                       <h4>NIFS TOOL - USER MANUAL & TECHNICAL GUIDE</h4>
                       <p>This manual is designed to assist DNR Aviation Operations personnel in processing and exporting National Incident Feature Service (NIFS) data for wildfire incident operations. The NIFS Tools automates the filtering and conversion of standardized incident features—including tactical points, operational boundaries, linear restrictions, and area polygons—into KMZ files optimized for Google Earth and field operations platforms. Accurate NIFS data processing is essential for maintaining operational safety and tactical effectiveness, as it ensures aviation crews have access to current helispot locations, temporary flight restrictions, aerial hazards, and fire perimeters using nationally standardized symbology. Proper data export supports incident briefing packages, mission planning, and real-time situational awareness while maintaining consistency with interagency wildfire mapping standards across all coordination levels.</p>
                       <a class="button small" target="_blank" href="https://drive.google.com/file/d/1_8OF1tNzpIWQ2HUqTu6SyPF47AGVlb_v/view?usp=sharing">View Manual</a>
@@ -632,10 +726,10 @@
           <h2 class="major">About</h2>
           <span class="image main"><img src="images/tie.jpg" alt="Portrait" /></span>
           <p>
-            My name is Joshua Serfass, and I currently serve as the Mission Sensor Program Specialist (Photogrammetrist 3) for the Washington State Department of Natural Resources (DNR) in the Wildfire Division – Aviation Section. I lead a team of two Mission Sensor Operators, and together we are responsible for collecting aerial intelligence during wildland fire missions and other ad-hoc assignments. Our work includes providing RGB, MWIR, and SWIR imagery and video products, as well as generating spatial data outputs such as fire perimeters, hot spot locations, and other critical points of interest.
+            My name is Joshua Serfass, and I currently serve as the Air Operations Automation Coordinator (Wildland Fire Program Coordinator 1) for the Washington State Department of Natural Resources (DNR), Wildland Fire Management Division. In this role I focus on geospatial data management, automation toolbox development, and operational data systems supporting DNR's aviation and wildfire programs.
           </p>
           <p>
-            In addition to my primary role, I serve as a Geographic Information Systems Specialist (GISS) on a Type 2 Wildfire Incident Management Team. I am also a qualified Part 107 UAS pilot, with open NWCG UAS-P (Pilot) and UAS-D (Data Specialist) task books.
+            I serve as a Geographic Information Systems Specialist (GISS) on Northwest Incident Management Team 13, a Type 2 Wildfire Incident Management Team. I am also a qualified Part 107 UAS pilot, with open NWCG UAS-P (Pilot) and UAS-D (Data Specialist) task books.
           </p>
           <p>
             My academic background includes an M.S. in Geospatial Technologies and a GIS Certificate from the University of Washington – Tacoma, along with Natural Resource Management coursework from Oregon State University. I also hold a B.S. in Accounting from King's College in Pennsylvania.
@@ -679,9 +773,9 @@
   <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
     <h3>Connect With Me</h3>
     <p>
-      <strong>Email:</strong> <a href="mailto:jserfass39@gmail.com">jserfass39@gmail.com</a><br>
+      <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#a6ccd5c3d4c0c7d5d5959fe6c1cbc7cfca88c5c9cb"><span class="__cf_email__" data-cfemail="0e647d6b7c686f7d7d3d374e69636f6762206d6163">[email&#160;protected]</span></a><br>
       <strong>Location:</strong> Washington State<br>
-      <strong>Current Role:</strong> Mission Sensor Program Specialist, WA DNR
+      <strong>Current Role:</strong> Air Operations Automation Coordinator, WA DNR
     </p>
   </div>
 
@@ -693,7 +787,7 @@
   </ul>
 </article>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function handleFormSubmit(event) {
   event.preventDefault();
   
@@ -760,11 +854,4 @@ function copyToClipboard(text) {
     <div id="bg"></div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-  </body>
-</html>
+    <script src="assets/js/
